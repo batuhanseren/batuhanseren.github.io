@@ -29,8 +29,11 @@ const share = document.getElementById("share");
 let link = document.querySelector("#sharelink");
 share.addEventListener("click", async (event) => {
   const content = document.getElementById("copy-board").textContent;
-  await navigator.clipboard.writeText(content);
-  const copied = await navigator.clipboard.readText();
-  console.log(copied);
-  
+  var tempInput = document.createElement("input");
+  tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+  tempInput.value = content;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
 });
