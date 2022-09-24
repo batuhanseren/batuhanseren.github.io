@@ -109,3 +109,21 @@ section {
   display: none;
   visibility: hidden;
 }
+.alert {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 5px 25px;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #2a0944;
+  color: white;
+  transition: 300ms all;
+  visibility: hidden;
+}
+.alert.active {
+  transform: translate(-50%, -20px);
+  visibility: visible;
+  opacity: 1;
+}

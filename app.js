@@ -36,4 +36,23 @@ share.addEventListener("click", async (event) => {
   tempInput.select();
   document.execCommand("copy");
   document.body.removeChild(tempInput);
+  notification("Copied!");
 });
+
+function notification(msg) {
+  var old_div = document.querySelector(".alert")
+  if (old_div) {
+    old_div.parentNode.removeChild(old_div);
+    
+  }
+  var div = document.createElement("div");
+  div.className = "alert";
+  div.innerHTML = msg;
+  document.body.appendChild(div);
+  setTimeout(function () {
+    div.classList.add("active");
+  }, 1);
+  setTimeout(function () {
+    div.classList.remove("active");
+  }, 1000);
+}
