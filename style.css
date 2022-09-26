@@ -33,6 +33,11 @@ section {
   body {
     padding: 40px 6%;
   }
+
+  .modal-ch {
+    width: 100% !important;
+    margin: 0 6% !important;
+  }
 }
 
 .sum img {
@@ -92,12 +97,13 @@ section {
   align-items: center;
   justify-content: center;
   background-color: #dcd6f7;
-  width: 100%;
+  width: 50%;
   height: 50vh;
   text-align: center;
   z-index: 9999;
   border-radius: 10px;
 }
+
 #share {
   background-color: #2a0944;
 }
