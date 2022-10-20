@@ -54,5 +54,5 @@ function notification(msg) {
   }, 1);
   setTimeout(function () {
     div.classList.remove("active");
-  }, 1000);
+  }, 1001);
 }
